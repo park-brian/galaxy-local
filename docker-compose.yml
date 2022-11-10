@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  galaxy:
+    build: 
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./galaxy.yml:/galaxy/config/galaxy.yml
